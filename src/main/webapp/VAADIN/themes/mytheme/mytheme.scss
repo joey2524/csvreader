@@ -1,0 +1,32 @@
+/* Import the reindeer theme. */
+/* This only allows us to use the mixins defined in it and does not add any styles by itself. */
+@import "../reindeer/reindeer.scss";
+
+/* This contains all of your theme. */
+/* If somebody wants to extend the theme she will include this mixin. */
+@mixin mytheme {
+  /* Include all the styles from the reindeer theme */
+  @include reindeer;
+
+  /* Insert your theme rules here */
+  
+    .dropdisplaywindow img {
+        max-height: 300px;
+        max-width: 500px;
+    }
+    .dropdisplaywindow .v-label {
+        max-width: 500px;
+        white-space: normal;
+    }
+    .drop-area {
+        border: 8px dashed #A4A4A2;
+        border-radius: 20px;
+        padding: 40px;
+    }
+    .drop-area .v-label {
+        color: #919083;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+}
